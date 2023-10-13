@@ -12,6 +12,14 @@ public class optimizedWheel_V2{
     private static ArrayList<Integer> myTroubleList = new ArrayList<>(); 
     private static ArrayList<Integer> troubleRes = new ArrayList<>(); 
 
+    public static void updateTList()
+    {
+        for(int a : myPrimeNumber)
+        {
+            myTroubleList.add(a*a);
+        }
+    }
+
     public static boolean isPrime(int num)
     {
         int limit = (int) Math.sqrt(num); 
@@ -54,7 +62,7 @@ public class optimizedWheel_V2{
         current_mileStone = 6;
         breakingFlag = false;
         nextMileStone = 30;
-        range = 10000;
+        range = 10000000;
         expectionalIndex = 3;
         mileStoneMultiple = 6;
         
@@ -107,21 +115,22 @@ public class optimizedWheel_V2{
             current_mileStone = nextMileStone;
             nextMileStone =  current_mileStone * myPrimeNumber.get(expectionalIndex+1);
             myExceptionalcases.add(myPrimeNumber.get(expectionalIndex));
+            updateTList();
             ++expectionalIndex;
         }
         // int count =-1;
         for(int a:myPrimeNumber)
         {
                 cntmap.add(a);
-                System.out.println(a);
+                // System.out.println(a);
             }
         for(int a:troubleRes)
         {
                 cntmap.add(a);
-                System.out.println(a);
+                // System.out.println(a);
         }
 
-        System.out.println("My Final : "+cntmap.size());
+        System.out.println("My Final : "+(cntmap.size()-1));
 
 
         end_milli=System.currentTimeMillis();

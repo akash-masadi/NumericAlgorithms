@@ -1,4 +1,3 @@
-package Primality.SOS;
 class sundaram {
     public static void main(String[] args) 
     {
@@ -13,7 +12,6 @@ class sundaram {
             long limit = check1+check2+2l*check1*check2;
             while(range>=limit)
             {
-                
                 array[(int)limit]=true;
                 check2+=1;
                 limit=check1+check2+2l*check1*check2;
@@ -23,7 +21,6 @@ class sundaram {
         {
             if(array[index]==false)
             {
-            //System.out.println(2*i+1);
             count+=1;
             }
         }
