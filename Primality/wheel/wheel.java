@@ -1,7 +1,15 @@
+/*
+ * Wheel factorization Approach
+ * Initial golden numbers: 1 7 11 13 17 19 23 29 Total = 8
+ * Prime numbers:
+ * 2 3 5 
+ *        7 11 13 17 19 23 29
+ * +30 31 37 41 43 47 49
+ */
 class wheel {
     public static void main(String[] args) 
     {
-        long n=10000000019l;
+        long n=91;
         long k=(n%30);
 
         long startSwitch=System.currentTimeMillis(); //switch starting time in milli
@@ -9,6 +17,7 @@ class wheel {
 
         switch((int)k)
         {
+            case 1:
             case 7:
             case 11:
             case 13:
@@ -29,7 +38,7 @@ class wheel {
         long startif=System.currentTimeMillis(); // if start time in milli
         long startNanoif=System.nanoTime();  //if start in nano
 
-        if(k==7 || k==11 || k==13 || k==17 || k==19 || k==23  || k==29)
+        if(k==1 || k==7 || k==11 || k==13 || k==17 || k==19 || k==23  || k==29)
             System.out.println("PRIME");
         else
             System.out.println("NOT");

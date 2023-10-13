@@ -5,6 +5,7 @@
  * Every Composite number X has atleast One prime number factor less than or equal to sqrt(X)
  * Theorem 2 :
  * Every prime number (X>3) is of the form "(6*n+1)" or "(6*n-1)".
+ * Wheel Factorization Approch
  */
 public class prime1 {
     public static void main(String[] args) {
