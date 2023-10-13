@@ -21,7 +21,6 @@ class sundaram {
         {
             if(array[index]==false)
             {
-            //System.out.println(2*i+1);
             count+=1;
             }
         }
