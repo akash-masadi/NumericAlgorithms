@@ -1,23 +1,20 @@
-public class sieveOfAtkins
-{
-    public static void main(String[] args) {
-        int limit = 1000000;
-        boolean[] list = new boolean[limit];
-        int x;
-        int y;
-        int n;
+#include <iostream>
+using namespace std;
 
-        long start_milli=System.currentTimeMillis();
-        long start_nano=System.nanoTime();
-        long end_milli;
-        long end_nano;
+int main()
+{        
+        long long int limit = 1000000;
+        bool list[limit]={0};
+        long long int x;
+        long long int y;
+        long long int n;
 
         for(x=1;(x*x)<=limit;x++)
         {
             for(y=1;(y*y)<=limit;y++)
-            {
-                int sqX = x*x;
-                int sqY = y*y;
+            {    
+                long long int sqX = x*x;
+                long long int sqY = y*y;
                 n = 4 * sqX + sqY;
                 if(n<=limit && (n%12==1 || n%12 == 5))
                 {
@@ -41,23 +38,18 @@ public class sieveOfAtkins
         for(n=5;(n*n)<=limit;n++)
         {
             if(list[n])
-            {
-                for(int i = n*n;i<limit;i+=n*n)
+            {        
+                for(long long int i = n*n;i<limit;i+=n*n)
                 {
                     list[i]=false;
                 }
             }
-        }
-        int count=2;
+        } 
+        long long int count=2;
         for(n=5;n<limit;n+=2)
-        {
+        {           
             if(list[n]) count++;
         }
-        System.out.println(count);
-
-        end_milli=System.currentTimeMillis();
-        end_nano=System.nanoTime();
-        System.out.println("Time : "+(end_milli-start_milli)/1000.0);
-        System.out.println((end_nano-start_nano));
-    }
+        cout << count << endl;
+        return 0;
 }
