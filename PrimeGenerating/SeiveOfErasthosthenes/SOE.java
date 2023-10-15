@@ -7,14 +7,14 @@ public class SOE {
     long end_milli;
     long end_nano;
 
-	int range=10000;
+	int range=10000000;
 	boolean array[]=new boolean[range];
 	int square_of_num=(int)Math.sqrt(range);
 	for(int start=2;start<= square_of_num;start++)
 	{
 	   if(!array[start])
 	   {
-    for(int condition = start * start ; condition < range ; condition +=start )
+    	for(int condition = start * start ; condition < range ; condition +=start )
 		    array[condition]=true;
 	   }
     }
