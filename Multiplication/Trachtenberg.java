@@ -1,4 +1,3 @@
-import java.lang.*;
 public class Trachtenberg 
 {
     public static void main(String[] args) 
