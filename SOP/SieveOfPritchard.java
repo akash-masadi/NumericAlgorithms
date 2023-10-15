@@ -16,7 +16,7 @@ public final class SieveOfPritchard {
 	
 	private static List<Integer> sieveOfPritchard(int limit) {		
 		List<Integer> primes = new ArrayList<Integer>();
-		BitSet members = new BitSet(limit + 1);
+		BitSet members = new BitSet(limit + 1);	
 	    members.set(1);
 	    List<Integer> deletions = new ArrayList<Integer>();
 	    final int rootLimit = (int) Math.sqrt(limit);
@@ -35,7 +35,7 @@ public final class SieveOfPritchard {
 	    		}
 	            stepLength = nLimit;
 	    	} 
-	    	
+	    	System.out.println("nlimit :"+nLimit+" Step Lem: "+ stepLength+"");
 	    	deletions.clear();
 	    	int nextPrime = 5;
 	        for ( int w = 1; w < nLimit; w = members.nextSetBit(w + 1) ) {

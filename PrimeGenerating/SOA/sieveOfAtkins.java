@@ -1,7 +1,7 @@
 public class sieveOfAtkins
 {
     public static void main(String[] args) {
-        int limit = 1000000;
+        int limit = 10000000;
         boolean[] list = new boolean[limit];
         int x;
         int y;
