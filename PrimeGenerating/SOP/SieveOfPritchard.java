@@ -35,7 +35,7 @@ public final class SieveOfPritchard {
 	    		}
 	            stepLength = nLimit;
 	    	} 
-	    	System.out.println("nlimit :"+nLimit+" Step Lem: "+ stepLength+"");
+	    	// System.out.println("nlimit :"+nLimit+" Step Lem: "+ stepLength+"");
 	    	deletions.clear();
 	    	int nextPrime = 5;
 	        for ( int w = 1; w < nLimit; w = members.nextSetBit(w + 1) ) {
@@ -70,7 +70,6 @@ public final class SieveOfPritchard {
 	            }
     		}
 	    }
-	    
 	    members.clear(1);
 	    for ( int i = members.nextSetBit(0); i >= 0; i = members.nextSetBit(i + 1) ) {
 	    	primes.add(i);
